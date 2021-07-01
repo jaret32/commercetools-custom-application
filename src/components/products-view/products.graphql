@@ -1,0 +1,13 @@
+query FetchProducts {
+  products(where: "masterData(published=true)") {
+    results {
+      id
+      masterData {
+        current {
+          name(locale: "en-US")
+          description(locale: "en-US")
+        }
+      }
+    }
+  }
+}
